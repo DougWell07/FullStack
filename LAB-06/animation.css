@@ -1,0 +1,16 @@
+body{
+    background-color: aliceblue;
+}
+#canvas{
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+}
+.canva{
+    display: flex;
+    justify-content: center;   
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+}
