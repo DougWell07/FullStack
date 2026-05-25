@@ -1,0 +1,122 @@
+/* ============================================================
+   CONFIGURAÇÕES GERAIS
+   ============================================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+header {
+    background: linear-gradient(135deg, #001e50 0%, #004a99 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 4px solid #00e6ff;
+}
+
+/* ============================================================
+   SEÇÕES
+   ============================================================ */
+section {
+    background-color: #1e1e1e;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+h2, h3 {
+    color: #00e6ff;
+    margin-bottom: 20px;
+    border-left: 5px solid #00e6ff;
+    padding-left: 15px;
+}
+
+li {
+    background: #2a2a2a;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 5px;
+    list-style-position: inside;
+}
+
+/* ============================================================
+   GALERIA DE IMAGENS (150x150 LADO A LADO)
+   ============================================================ */
+.galeria-fotos {
+    display: flex ;       /* Ativa o modo linha */
+    flex-direction: row ;  /* Força ser horizontal */
+    flex-wrap: nowrap ;    /* Proíbe pular linha */
+    justify-content: center ; 
+    gap: 10px ;
+    width: 100% ;
+    margin-top: 20px;
+}
+
+.galeria-fotos img {
+    width: 150px ;         /* Largura exata */
+    height: 150px ;        /* Altura exata */
+    min-width: 150px ;     /* Garante que não encolha */
+    object-fit: cover;               /* Não distorce a imagem */
+    border-radius: 8px;
+    border: 2px solid #444;
+}
+
+/* ============================================================
+   BOTÕES E LINKS
+   ============================================================ */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00e6ff;
+    color: #121212;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+/* ============================================================
+   VÍDEOS E MAPA
+   ============================================================ */
+.video-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Ajuste para telas menores (se as imagens de 150px não couberem) */
+@media (max-width: 850px) {
+    .galeria-fotos {
+        flex-wrap: wrap; /* Permite quebrar linha em telas pequenas para não bugar */
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    opacity: 0.5;
+}
