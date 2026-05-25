@@ -1,0 +1,209 @@
+body{
+    background-color: lightgray;
+}
+.topo {
+    background: bisque;
+    border: 3px solid indigo;
+    padding: 20px;
+    color: darkgreen;
+    justify-content: space-between;
+}
+.logo_esq{
+    position: absolute;
+    width: 100px;
+    top: 15px;
+    right: 20px;
+}
+.logo_dir{
+    position: absolute;
+    width:100px;
+    top: 15px;
+    left: 20px;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.menu{
+    background: lightskyblue;
+    border-style: hidden;
+    border: 1px solid lightskyblue;
+    padding: 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.menu{
+    a{font-weight: bold;
+    margin:0 20px;
+}
+}
+.texto{
+    font-family: sansserif;
+    font-size: 20pt;
+    color: indigo;
+    font-weight: bold;
+    justify-content: space-between;
+}
+.texto{
+    p{
+        text-align: center;
+    }
+}
+
+/* O "pai" das imagens */
+.container-livros {
+    display: flex;            /* Ativa o modo flexível */
+    justify-content: center;  /* Centraliza o grupo todo na tela */
+    align-items: center;      /* Alinha verticalmente (caso tenham alturas diferentes) */
+    gap: 30px;               /* Cria o espaço exato entre cada livro */
+    padding: 40px;
+    background-color: #ddd;   /* Cor de fundo cinza igual à da sua imagem */
+}
+
+/* Estilo individual de cada imagem */
+.container-livros img {
+    width: 250px;             /* Ajuste a largura como preferir */
+    height: auto;             /* Mantém a proporção sem distorcer */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.2); /* Sombra para dar profundidade */
+}
+
+.container-midia {
+    display: flex;            /* Coloca um ao lado do outro */
+    justify-content: center;  /* Centraliza na horizontal */
+    align-items: center;      /* Alinha a altura deles */
+    gap: 20px;               /* Espaço entre o vídeo e o mapa */
+    padding: 40px;
+    background-color: #ddd;   /* Cor de fundo cinza igual à imagem */
+    flex-wrap: wrap;          /* Se a tela for pequena, o mapa vai para baixo sozinho */
+}
+
+/* Opcional: ajustar o tamanho para não estourarem a tela */
+iframe {
+    max-width: 100%;
+}
+
+
+.tabela-contato {
+    margin: 50px auto;       
+    border: 4px dashed red;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background-color: #ccc;
+}
+
+/* Estilo para todas as células (cabeçalho e corpo) */
+.tabela-contato th, 
+.tabela-contato td {
+  border: 2px double red;    /* Borda dupla vermelha nas células */
+  padding: 10px 20px;
+  text-align: center;
+}
+
+/* Estilo específico para o cabeçalho (Nome e Email) */
+.tabela-contato th {
+  color: red;                /* Texto em vermelho */
+  font-weight: bold;
+}
+
+/* Estilo para as células de conteúdo */
+.tabela-contato td {
+  color: black;
+}
+
+.caixa-consulta {
+    background-color: yellow;
+    padding: 5px;
+    font-family: serif;
+    width: fit-content;
+    
+    /* ADICIONE ESTAS LINHAS */
+    margin-left: auto;
+    margin-right: auto;
+    /* -------------------- */
+}
+
+.caixa-consulta p {
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+
+.caixa-consulta ul {
+    list-style-type: disc;    /* Garante as bolinhas da lista */
+    padding-left: 40px;       /* Recuo da lista */
+}
+
+.caixa-consulta li {
+    margin-bottom: 5px;
+    color: #000;
+}
+
+/* Faz com que o texto antes do link tenha um tamanho fixo */
+.label {
+    display: inline-block;
+    width: 120px;             /* Ajuste esse valor para alinhar os links */
+    font-weight: bold;
+}
+
+.caixa-consulta a {
+    color: brown;             /* Cor avermelhada/marrom dos links na imagem */
+    text-decoration: none;    /* Remove o sublinhado se desejar igual à foto */
+    font-weight: bold;
+}
+
+.caixa-consulta a:hover {
+    text-decoration: underline;
+}
+
+.rodape {
+    background-color: #FFE4C4; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 15px 40px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura total */
+}
+
+/* Garante que as áreas laterais ocupem o mesmo espaço */
+.bloco-logo {
+    flex: 1; 
+    display: flex;
+}
+
+/* O logo da direita precisa alinhar o conteúdo para o fim (direita) */
+.bloco-logo:last-child {
+    justify-content: flex-end;
+}
+
+.texto-central {
+    flex: 2; /* Dá mais espaço para o texto respirar no meio */
+    text-align: center;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    font-size: 15pt;
+    color: #000;
+}
+
+.texto-central p {
+    margin: 4px 0;
+}
+
+.logo-rodape {
+    height: 80px; /* Tamanho fixo para manter a proporção da imagem */
+    width: auto;
+    display: block;
+}
+
+/* Responsividade: No celular, os itens ficam um embaixo do outro */
+@media (max-width: 600px) {
+    .rodape {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .bloco-logo:last-child {
+        justify-content: center;
+    }
+}
