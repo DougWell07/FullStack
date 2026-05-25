@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivinhação</title>
+  <link rel="stylesheet" href="guess.css" />
+</head>
+<body>
+  <div class="card">
+    <h1> Adivinhação</h1>
+    <p class="subtitle">Tente adivinhar o número secreto!</p>
+    <div class="range-badge">ENTRE 1 E 99</div>
+ 
+    <input
+      type="number"
+      id="user-input"
+      placeholder="Digite um número..."
+      min="1"
+      max="100"
+    />
+ 
+    <button onclick="verificar()">Adivinhar</button>
+ 
+    <div id="feedback-box" class="hidden"></div>
+ 
+    <p class="tries-label">Tentativas: <span id="tries">0</span></p>
+  </div>
+ 
+  <a class="back" href="projects.html">← Voltar para Projetos</a>
+ 
+  <script src="guess.js"></script>
+</body>
+</html>
